@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Tumor Classification</title>
+    <link rel="stylesheet" href="/static/css/predict.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <h1>Breast Tumor Classification</h1>
+            <form id="prediction-form">
+                <div class="form-group">
+                    <label for="radius_mean">Radius Mean:</label>
+                    <input type="number" step="any" id="radius_mean" name="radius_mean" required>
+                </div>
+                <div class="form-group">
+                    <label for="texture_mean">Texture Mean:</label>
+                    <input type="number" step="any" id="texture_mean" name="texture_mean" required>
+                </div>
+                <div class="form-group">
+                    <label for="smoothness_mean">Smoothness Mean:</label>
+                    <input type="number" step="any" id="smoothness_mean" name="smoothness_mean" required>
+                </div>
+                <div class="form-group">
+                    <label for="compactness_mean">Compactness Mean:</label>
+                    <input type="number" step="any" id="compactness_mean" name="compactness_mean" required>
+                </div>
+                <div class="form-group">
+                    <label for="concavity_mean">Concavity Mean:</label>
+                    <input type="number" step="any" id="concavity_mean" name="concavity_mean" required>
+                </div>
+                <div class="form-group">
+                    <label for="symmetry_mean">Symmetry Mean:</label>
+                    <input type="number" step="any" id="symmetry_mean" name="symmetry_mean" required>
+                </div>
+                <div class="form-group">
+                    <label for="radius_se">Radius SE:</label>
+                    <input type="number" step="any" id="radius_se" name="radius_se" required>
+                </div>
+                <div class="form-group">
+                    <label for="concave_points_se">Concave Points SE:</label>
+                    <input type="number" step="any" id="concave points_se" name="concave points_se" required>
+                </div>
+                <div class="form-group">
+                    <label for="smoothness_worst">Smoothness Worst:</label>
+                    <input type="number" step="any" id="smoothness_worst" name="smoothness_worst" required>
+                </div>
+                <div class="form-group">
+                    <label for="compactness_worst">Compactness Worst:</label>
+                    <input type="number" step="any" id="compactness_worst" name="compactness_worst" required>
+                </div>
+                <div class="form-group">
+                    <label for="concavity_worst">Concavity Worst:</label>
+                    <input type="number" step="any" id="concavity_worst" name="concavity_worst" required>
+                </div>
+                <div class="form-group">
+                    <label for="symmetry_worst">Symmetry Worst:</label>
+                    <input type="number" step="any" id="symmetry_worst" name="symmetry_worst" required>
+                </div>
+                <div class="form-group">
+                    <label for="fractal_dimension_worst">Fractal Dimension Worst:</label>
+                    <input type="number" step="any" id="fractal_dimension_worst" name="fractal_dimension_worst" required>
+                </div>
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="prediction-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-result"></div>
+        </div>
+    </div>
+
+    <script src="/static/js/predict.js"></script>
+</body>
+</html>
